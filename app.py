@@ -12,7 +12,7 @@ import os
 
 app = Flask(__name__)
 
-APIFY_TOKEN = "apify_api_QoW4djk70i7ucFtZ0LxJe8uRJyHQPE0bH0mA"
+APIFY_TOKEN = os.environ.get("APIFY_TOKEN", "apify_api_QoW4djk70i7ucFtZ0LxJe8uRJyHQPE0bH0mA")
 
 def detect_platform(url):
     if "instagram.com" in url:
